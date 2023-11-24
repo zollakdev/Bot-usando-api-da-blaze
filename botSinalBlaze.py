@@ -58,8 +58,8 @@ def martin_gale(gale, ultimo):
 
 
 def enviar_mensagem(mensagem):
-    bot_token = '6107470794:AAFAdmdiEqxQS-RVf10sV8-1PfGuaQ7GVLc'
-    chat_id = '-1001870708026'
+    bot_token = ''
+    chat_id = ''
     url_blaze = '🎰 [Blaze](https://blaze.com/pt/games/double)'
     url = f'https://api.telegram.org/bot{bot_token}/sendMessage?chat_id={chat_id}&text={mensagem}\n{url_blaze}&parse_mode=Markdown'
     requests.get(url)
@@ -85,8 +85,6 @@ while True:
         gale1 = f'Vamos para o gale 1 \n{simbolo[padrao[0]]} {cor[padrao[0]]}\n{simbolo[0]} Proteção no Branco'
         gale2 = f'Vamos para o gale 2 \n{simbolo[padrao[0]]} {cor[padrao[0]]}\n{simbolo[0]} Proteção no Branco'
 
-        # Como as estratégias sempre jogam na cor contraria, resolvi colocar as cores
-        # Vermelha e Preta em indices diferentes para aproveirar a logica
         if padrao == [1, 1, 1, 1] or padrao == [2, 2, 2, 2] or padrao == [1, 2, 1, 2] or padrao == [2, 1, 2, 1]:
             enviar_mensagem(analise)
             esperar()
